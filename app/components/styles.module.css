@@ -1,0 +1,32 @@
+.radialBlack {
+  width: 100%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(2, 2, 2, 0.09) 0.01%);
+}
+
+.heroButtonShadow {
+  box-shadow: 0px -3px 0px rgba(0, 0, 0, 0.21) inset, 0px 0px 5px 4px rgba(247, 61, 45, 0.07), 0px 1px 3px rgba(143, 143, 143, 0.2),
+    0px 6px 13px rgba(0, 0, 0, 0.04), 0px 53px 32px rgba(0, 0, 0, 0.02), 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06),
+    0px 2.4000000953674316px 0px rgba(255, 255, 255, 0.14) inset;
+}
+
+.scrollContainer {
+  display: flex;
+  overflow-x: hidden; /* Cache la barre de défilement et empêche le défilement manuel */
+  white-space: nowrap; /* Assure que tous les logos sont sur une seule ligne */
+  animation: scroll 50s linear infinite; /* Adaptez la durée selon vos besoins */
+}
+
+.square {
+  width: 60px;
+  padding-top: 100%; /* Hauteur égale à la largeur */
+  position: relative; /* Pour positionner absolument les enfants à l'intérieur */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-30%); /* Déplacez les logos pour créer un défilement continu */
+  }
+}
